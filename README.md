@@ -1,4 +1,5 @@
-#Start of Readme file's content
+# Start of Readme file's content
+
 
 ## ICP2017F - Introduction to Computer Programming
 
@@ -23,7 +24,7 @@
 **Phote:** 
 
 
-###Description of the project's content
+### Description of the project's content
 
 ***
 
@@ -39,4 +40,4 @@ trr872@utexas.edu
 
 
 
-#End of Readme file's content
+# End of Readme file's content

@@ -9,7 +9,7 @@
 
 **UT Eid:** trr872
 
-*Email:* trr82@utexas.edu
+**Email:** trr82@utexas.edu
 
 **Deparment:** [Computational Engineering](http://www.ae.utexas.edu/undergraduate/computational-undergrad-program)
 

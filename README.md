@@ -21,7 +21,7 @@
 
 **Course Webpage:** [http://www.shahmoradi.org/ICP2017F/](http://www.shahmoradi.org/ICP2017F/)
 
-**Photo:** ![alt text](https://www.instagram.com/p/BGU0O7joYZH/?taken-by=trevorroberts__)
+**Photo:** ![alt text](https://pbs.twimg.com/media/Cb6YsSUUcAAjtob.jpg)
 
 
 ### Description of the project's content

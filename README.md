@@ -5,14 +5,23 @@
 ***
 
 **Name:** Trevor Roberts
+
 **UT Eid:** trr872
+
 *Email:* trr82@utexas.edu
+
 **Deparment:** [Computational Engineering](http://www.ae.utexas.edu/undergraduate/computational-undergrad-program)
+
 **University:** [University of Texas at Austin](https://www.utexas.edu/)
+
 **Level:** Undergraduate - Sophomore
+
 **ICP Class Position:** Student
+
 **Course Webpage:** [http://www.shahmoradi.org/ICP2017F/](http://www.shahmoradi.org/ICP2017F/)
+
 **Phote:** 
+
 
 ###Description of the project's content
 
@@ -27,6 +36,7 @@ For questions and troubleshooting, please contact:
 
 Trevor Roberts
 trr872@utexas.edu
+
 
 
 #End of Readme file's content

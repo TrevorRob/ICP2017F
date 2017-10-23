@@ -1,0 +1,32 @@
+1. * mulplies matrices by matrix multiplication. .* multiplies martices by element wise.
+2. A * B'
+3. a) function [n] = testString(x)
+    n = class(x);
+    if (isString(n))
+       return true;
+    else
+        return false;
+b) == compares values. Strings still have numerical value in Matlab.
+
+4. | is more effienct. It also compares matrix dimensions.
+5. Add the is real function to x. isreal
+6. A structure array would be more efficient for calculating the average because all the grades can be insterted at once. An 
+array of structures would be highly tedious inserting the data.
+7. function [r1, r2] = getRoot(a,b,c)
+    r1 = (-b + sqrt(b^2 - 4 * a *c))/(2*a);
+    r2 = (-b - sqrt(b^2 - 4 * a *c))/(2*a);
+end
+
+8. y.fun = @(x) x.^2 + cx +1;
+y.l = 0;
+y.u =1;
+y.integral = integral(fun,l,u)
+   
+9. function [f] = getFac(n)
+    while(n>=0)
+        f = 1;
+        f = n*f;
+        n = n-1;
+    end
+    return f
+end

@@ -1,0 +1,22 @@
+1. A) function num = getFacWhile(n)
+num = 1;
+while(n > 0)
+   num = num * n;
+   n = n - 1;
+   end
+ end
+ B) function fac = getFacFor(n)
+ fac = 1;
+ i =1; 
+ for(i:n)
+ fac = fac * i
+ end
+ end
+ C) function fac =getFacVec(n)
+ vect = zeros(1,length(n));
+ fac = prod(vect, i);
+ end
+ 2. function time = timeFacFuncs
+ dips timeit(getFacWhile)
+ disp timeit(getFacFor)
+ disp timeit(getFacVec)

@@ -278,12 +278,12 @@ else
 end
 
     function fib = getFib(n_int)
-        firstnum = 0;
-        secondnum = 1;
+        older = 0;
+        old = 1;
         for i = 2:n_int
-            fib = firstnum+secondnum;
-            firstnum=secondnum;
-            secondnum=fib;
+            fib = older+old;
+            older=old;
+            old=fib;
         end
     end
 end

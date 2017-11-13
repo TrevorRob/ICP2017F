@@ -102,8 +102,7 @@ output to be slightly off. By the 52nd iteration it has decreased all the way 1.
 5. In each iteration eps is divided by 2, so eps starts out at 1 and becomes 0.5,
 then 0.25, then 0.125 and so on. Eventually eps is so small (1.1102e-16) that when its added to '1.0'
 and that value is truncated to a certain number of decimal places (because a double precision
-variable is only 8 bytes or 16 decimal places after a one digit number), the result is just
-1.0000000000000000, and that value is equivalent to 1.0, so it breaks out of the while loop 
+variable is only 8 bytes), the result is just 1.0000000000000000, and that value is equivalent to 1.0, so it breaks out of the while loop 
 and displays the final value for the variable eps. In this code the only way 1.0 ~= 1.0 + eps could be false is if eps = 0. 
 
 

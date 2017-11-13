@@ -17,6 +17,6 @@ while(n > 0)
  fac = prod(vect, i);
  end
  2. function time = timeFacFuncs
- dips timeit(getFacWhile)
- disp timeit(getFacFor)
- disp timeit(getFacVec)
+ disp(['average runtime for getFacWhile: ', num2str(timeit(getFacWhile))]);
+ disp(['average runtime for getFacFor: ', num2str(timeit(getFacFor))]);
+ disp(['average runtime for getFacVec: ', num2str(timeit(getFacVec))]);

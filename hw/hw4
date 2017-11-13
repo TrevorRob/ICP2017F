@@ -177,12 +177,12 @@ b) function fibloop()
     end
     
     function fib = getFib(n_int)
-        firstnum = 0;
-        secondnum = 1;
+        old = 0;
+        older= 1;
         for i = 2:n_int
-            fib = firstnum+secondnum;
-            firstnum=secondnum;
-            secondnum=fib;
+            fib = old+ older;
+            old=older; 
+            older=fib;
         end
     end
 

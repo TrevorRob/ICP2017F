@@ -1,0 +1,13 @@
+1.
+
+2.
+function  robustWebRead(testUrl)
+try 
+    txt = webread(testUrl);
+    disp("done");
+catch
+    disp("Web addres doesn't exist");
+end
+end
+3. gca returns the most recent or current chart or axes.
+gcf returns the current figure handle.

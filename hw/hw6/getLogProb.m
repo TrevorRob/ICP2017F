@@ -1,4 +1,4 @@
-function tp = getLogProbNorm(x0)
+function tp = getLogProb(x0)
     global data nsample
     lp = zeros(nsample,1);
     for i = 1:nsample

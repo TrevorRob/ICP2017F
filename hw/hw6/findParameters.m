@@ -5,5 +5,5 @@ nsample = length(data);
 mu = 1;
 sigma = 10;
 x0 = [mu, sigma];
-x = fminsearch(@getLogProbNorm, x0);
+x = fminsearch(@getLogProb, x0);
 fprintf ('mu: %f, sigma: %f\n', x(1), x(2))

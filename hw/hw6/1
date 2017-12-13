@@ -2,14 +2,11 @@ clear all;
 close all;
 load('data3D.mat');
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% FIGURE SPECIFICATIONS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 nrow = round(sqrt(length(data(1,1,:)))); % number of subplots to be created in the y direction
 ncol = nrow;                             % number of subplots to be created in the x direction
 
-% main plot specifications
+
 mainPlotMarginTop = 0.06;       % top margin of the main axes in figure
 mainPlotMarginBottom = 0.12;    % bottom margin of the main axes in figure
 mainPlotMarginLeft = 0.08;      % bottom margin of the main axes in figure
@@ -35,21 +32,13 @@ colorbarPositionX = 1 - mainPlotMarginRight;                     % the x-positio
 colorbarHeight = nrow*subplotHeight+(nrow-1)*subplotInterspace;  % the height of the color bar
 colorLimits = [0,max(max(max(data(:,:,:))))];                    % the color bar limits, the dataset contains numbers between 0 and some large number.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% FIRST CREATE A FIGURE HANDLE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 figHandle = figure();                           % create a new figure
 figHandle.Visible = 'on';                       % set the visibility of figure in MATLAB
 figHandle.Position = [0, 0, 900, 1350];         % set the position and size of the figure
 figHandle.Color = [0.9400 0.9400 0.9400];       % set the background color of the figure to MATLAB default. You could try other options, such as 'none' or color names 'red',...
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ADD THE MAIN AXES TO THE FIGURE: 
-% The main axes is needed in order to add
-% the x and y labels and the color bar
-% for the entire figure.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 mainPlot = axes();              % create a set of axes in this figure. This main axes is needed in order to add the x and y labels and the color bar for the entire figure.
 mainPlot.Color = 'none';        % set color to none
@@ -70,9 +59,6 @@ mainPlot.XLabel.FontSize = mainPlotAxisFontSize; % set the font size for the x-a
 mainPlot.YLabel.FontSize = mainPlotAxisFontSize; % set the font size for the y-axis in mainPlot
 mainPlot.Title.FontSize = mainPlotTitleFontSize; % set the font size for the title in mainPlot
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ADD COLORBAR TO THE FIGURE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % now add the color bar to the figure
 axes(mainPlot);                       % focus on the mainPlot axes, because this is where we want to add the colorbar
@@ -86,9 +72,6 @@ cbar.Position = [ colorbarPositionX ... Now reset the position for the colorbar,
                 ];
 cbar.FontSize = colorbarFontSize;     % set the fontsize of the colorbar
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ADD THE SUBPLOTS TO THE FIGURE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 sliceNumber = 0;
 for irow = nrow:-1:1
@@ -112,17 +95,6 @@ for irow = nrow:-1:1
         end
         subPlot.Title.String = ['z = ', num2str(sliceNumber)];
         
-        % THE REST OF THIS CODE SHOULD BE ADDED BY YOU:
-        % Here you put the image slice that you want to plot (call imagesc() with the appropriate input data slice)
-        % then hold on to this figure.
-        % Now call the relevant properties of subplot to modify it properties, for example,
-        % to ensure that whenever the subplot is NEITHER in the first columns of plots
-        % NOR in the bottom row of subplots in the figure, then its XTickLabels and YTickLabels
-        % are set to null value []. For this, you will need to write an if-block.
-        % Also add the title for each subplot here using the subplot property subPlot.Title.String
-        % Finally set the color limits of the subplot to the proper range by subPlot.CLim = colorLimits
-        % where the variable colorLimits is defined in the above lines when we created the colorbar.
-        % END OF YOUR CODE ADDITIONS
     end
 end
 

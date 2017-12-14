@@ -3,7 +3,7 @@ load('cells.mat')
 initTumorCells=100000;
 loginitTumorCells=log(initTumorCells);
 time=[0,10,12,14,16,18,20,22];
-timenew = [0:.02:22];
+time2 = [0:.02:22];
 n=size(time);
 ndata=n(2);
 
@@ -19,7 +19,7 @@ ParameterOptimal=fminsearch(@getLogTumorCellsProb, ParameterInit);
 disp(['Optimal Pamameters:' ' lamda=', num2str(ParameterOptimal(1)), ' c=', num2str(ParameterOptimal(2)), ' sigma=', num2str(ParameterOptimal(3))])
  
 hold on;
-plot(timenew,exp(getLogTumorCells(timenew, loginitTumorCells, ParameterOptimal(1), ParameterOptimal(2))),'linewidth', 3 ,'color', 'red');
+plot(time2,exp(getLogTumorCells(time2, loginitTumorCells, ParameterOptimal(1), ParameterOptimal(2))),'linewidth', 3 ,'color', 'red');
 hold on;
 plot(time, TumorCells,'.-','markersize', 30,'linewidth', 3,'color', 'blue')
 legend('Gompertzian Fit', 'Experimental Data', 'location', 'northwest')
